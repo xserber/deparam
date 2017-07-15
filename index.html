@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="deparam.js"></script>
+  </head>
+  <body>
+
+    <script>
+      deparam("a[]=1&a[]=2&b[c][]=3&b[d]=4");
+      console.log(deparam("a[]=4&a[]=5&a[]=6&b[x][]=7&b[y]=8&b[z][]=9&b[z][]=0&b[z][]=true&b[z][]=false&b[z][]=undefined&b[z][]=&c=1"));
+    </script>
+  
+
+
+    <div>
+      {
+  "a": [
+    "4",
+    "5",
+    "6"
+  ],
+  "b": {
+    "x": [
+      "7"
+    ],
+    "y": "8",
+    "z": [
+      "9",
+      "0",
+      "true",
+      "false",
+      "undefined",
+      ""
+    ]
+  },
+  "c": "1"
+}
+    </div>
+  </body>
+</html>
